@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string('status');
             $table->string('priority');
             $table->string('due_date')->nullable();
-            $table->foreign_id('assigned__user_id')->constrained('users');
-            $table->foreign_id('created_by')->constrained('users');
-            $table->foreign_id('updated_by')->constrained('users');
-            $table->foreign_id('project_id')->constrained('projects');
+            $table->foreignId('assigned_user_id')->constrained('users');
+            $table->foreignId('created_by')->constrained('users');
+            $table->foreignId('updated_by')->constrained('users');
+            $table->foreignId('project_id')->constrained('projects');
             $table->timestamps();
         });
     }
